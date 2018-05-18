@@ -1,8 +1,8 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>原生Javascript练习2</title>
+	<title>原生JS练习</title>
 	<style>
 		body {
 			margin:10px 30px;
@@ -86,9 +86,9 @@
 		<button id="btn1-5">重置</button>
 		<div id="div1_1" style=""></div>
 		<script>
-		var js1_1=document.getElementById("js1_1");
-		var div1_1=document.getElementById("div1_1");
-		var btn=js1_1.getElementsByTagName("button");
+		var  js1_1=document.getElementById("js1_1");
+		var  div1_1=document.getElementById("div1_1");
+		var  btn=js1_1.getElementsByTagName("button");
 		btn[0].onclick=function(){
 			div1_1.style.width ='200px';
 		}
@@ -169,14 +169,14 @@
 		</ul>
 	</div>	
 	<script >
-			var link=document.getElementById("nav").getElementsByTagName("li");
-			var list12=document.getElementById("skin").getElementsByTagName("li");			
-			for(let i=0 ,len=list12.length;i<len;i++){
+			var  link=document.getElementById("nav").getElementsByTagName("li");
+			var  list12=document.getElementById("skin").getElementsByTagName("li");			
+			for(var i=0 ,len=list12.length;i<len;i++){
 				list12[i].onclick= function(){
-					for(let p in list12){
+					for(var  p in list12){
 						list12[p].className='';
 					}			
-					for(let m=0 ,len=link.length; m<len; m++){		
+					for(var m=0 ,len=link.length; m<len; m++){		
 						link[m].style.background = this.dataset.name;						
 					}
 				this.className = "current12";
@@ -193,8 +193,8 @@
 		</form>
 		<p >传参内容:<span id='inputcontet'></span></p>
 		<script>
-			var submit = document.getElementById("delivery");
-			var input =document.getElementById("args").getElementsByTagName("input");
+			var  submit = document.getElementById("delivery");
+			var  input =document.getElementById("args").getElementsByTagName("input");
 			function getinputvalue(a1,a2){
 				document.getElementById("inputcontet").innerText=a1.value+"-"+a2.value;
 			}
@@ -218,9 +218,9 @@
 <p class="tips"> <strong style="color:#FFA500">!注意 </strong>使用：display:inline-block;比 float:left 好的特点是 断行不会因高度差产生重叠</p>
 
 	<script>
-		var divjs4=document.getElementById("js1_4").getElementsByTagName("div");
+		var  divjs4=document.getElementById("js1_4").getElementsByTagName("div");
 		function changeColorDiv(){
-			for(let i=0,len=divjs4.length; i<len; i++){
+			for(var i=0,len=divjs4.length; i<len; i++){
 				divjs4[i].style.background='red';
 				//console.log(divjs4.length)
 			}
@@ -241,7 +241,7 @@
 			}
 		</style>
 		<script>
-			var mousediv = document.getElementById("div1_5");
+			var  mousediv = document.getElementById("div1_5");
 			mousediv.onmouseover=function(){
 				this.className='hover';
 			}
@@ -261,8 +261,8 @@
 <p class="tips"> <strong style="color:#FFA500">!注意 </strong> position:relative 和 position:absolute; 他们之间的位置关系 </p>
 
 		<script>
-			var pas = document.getElementById("pas");
-			var tips=document.getElementById("tip16");
+			var  pas = document.getElementById("pas");
+			var  tips=document.getElementById("tip16");
 			pas.onmouseover=function(){
 				tips.style.display='block';
 			}			
@@ -289,8 +289,8 @@
 			</ul>
 		</div>
 		<script>
-			var toggle=document.getElementById("toggle");
-			var show=document.getElementById("ime")
+			var  toggle=document.getElementById("toggle");
+			var  show=document.getElementById("ime")
 			toggle.onclick=function(){
 				show.style.display= show.style.display=="block"? 'none':'block';
 			}
@@ -317,9 +317,9 @@
 		</div>
 		<p> <strong style="color:red;font-size:20px;">div的内部text内容：</strong><span id="divshow"></span></p>
 		<script>
-			var contentdiv =document.getElementById("js2_2").getElementsByTagName("div");
-			var divshow=document.getElementById("divshow");
-			for(let i in contentdiv){
+			var  contentdiv =document.getElementById("js2_2").getElementsByTagName("div");
+			var  divshow=document.getElementById("divshow");
+			for(var i in contentdiv){
 				contentdiv[i].onclick=function(){
 					divshow.innerText=this.innerText;
 				}
@@ -332,13 +332,13 @@
 		数组：<input type="text" id="arr" value="1,2,3,4,5,6,7,8,9"><span style="font-size:12px;color:gray;">输入数字求和，数字之间用半角”,"分隔</span><br>	
 		<h4 ><input type="button" value="求和 =" id="getsum"> <span id="jsum">0</span></h4>
 		<script>
-			var arr=document.getElementById("arr");
-			var getsum=document.getElementById("getsum");
-			var summary=document.getElementById("jsum");
+			var  arr=document.getElementById("arr");
+			var  getsum=document.getElementById("getsum");
+			var  summary=document.getElementById("jsum");
 			getsum.onclick=function(){
-				var jsum=0;
-				var array=arr.value.split(",");
-				for(let i in array){
+				var  jsum=0;
+				var  array=arr.value.split(",");
+				for(var i in array){
 					jsum +=parseInt(array[i]);
 				}
 				summary.innerText=jsum;
@@ -360,13 +360,13 @@
 			</div>
 		</div>
 		<script>
-			var popupall=document.getElementById("popupall");
-			var layer=document.getElementById("layer");
-			var colose=document.getElementById("colose");
+			var  popupall=document.getElementById("popupall");
+			var  layer=document.getElementById("layer");
+			var  colose=document.getElementById("colose");
 			
 			popupall.onclick=function(){
 				layer.style.display='block';
-				let scrollTop=document.body.scrollTop || document.documentElement.scrollTop ;  //兼容FF和IE
+				var scrollTop=document.body.scrollTop || document.documentElement.scrollTop ;  //兼容FF和IE
 				console.log("top:"+ scrollTop  )				
 				layer.style.top=scrollTop +'px';
 
@@ -396,13 +396,13 @@
 			<p>在上方输入框输入"属性名"及"属性值"，点击确定按钮查看效果。</p>
 		</div>
 		<script>
-			var div2_5=document.getElementById("div2_5");
+			var  div2_5=document.getElementById("div2_5");
 			function reSetatr(){
 				div2_5.removeAttribute("style");
 			}
 			function setAtrbt(){
-				var name=document.getElementById("atrname").value;
-				var atrvalue=document.getElementById("atrvalue").value;
+				var  name=document.getElementById("atrname").value;
+				var  atrvalue=document.getElementById("atrvalue").value;
 				div2_5.style[name]=atrvalue;
 			}
 		</script>
@@ -446,8 +446,8 @@
 		<p style="clear:both"></p>
 	</div>
 	<script>
-		var ulist= document.getElementById("img_list").getElementsByTagName("li");
-		for(let i=0,len=ulist.length;i<len;i++){ 
+		var  ulist= document.getElementById("img_list").getElementsByTagName("li");
+		for(var i=0,len=ulist.length;i<len;i++){ 
 			ulist[i].onmouseover=function(){
 				this.className="current";
 			}
@@ -527,17 +527,17 @@
 
 	</div>
 	<script>
-		var list27 = document.getElementById("list7").getElementsByTagName("li");
-		var show27 = document.getElementById("show27").getElementsByTagName("ul");
-		for(let i=0,len=list27.length;i<len;i++){
+		var  list27 = document.getElementById("list7").getElementsByTagName("li");
+		var  show27 = document.getElementById("show27").getElementsByTagName("ul");
+		for(var i=0,len=list27.length;i<len;i++){
 			list27[i].index=i;
 			list27[i].onmouseover=function(){
-				for(let n=0, len=list27.length; n<len; n++){
+				for(var n=0, len=list27.length; n<len; n++){
 					list27[n].className ="";
 					}
 				this.className ='current27';	
 
-				for(let m=0, len=show27.length; m<len; m++){
+				for(var m=0, len=show27.length; m<len; m++){
 					show27[m].style.display="none";
 					}
 				show27[this.index].style.display ="block";	
@@ -584,8 +584,8 @@
 		</ul>
 		
 		<script>
-			var list8=document.getElementById("list8").getElementsByTagName("h2")[0];
-			var ulist8=document.getElementById("js2_8").getElementsByTagName("ul")[0];
+			var  list8=document.getElementById("list8").getElementsByTagName("h2")[0];
+			var  ulist8=document.getElementById("js2_8").getElementsByTagName("ul")[0];
 			list8.onclick=function(){
 				this.className= this.className==''?"open":"";
 				ulist8.style.display = ulist8.style.display=="block"?"none":"block";
@@ -650,12 +650,12 @@
 		</ul>
 		</div>
 	<script>
-		var listimg=document.getElementById("list9").getElementsByTagName("img");
-		var Picbgp =document.getElementById("Picbgp");
-		for(let i=1,len = listimg.length;i<len;i++){
+		var  listimg=document.getElementById("list9").getElementsByTagName("img");
+		var  Picbgp =document.getElementById("Picbgp");
+		for(var i=1,len = listimg.length;i<len;i++){
 	
 			listimg[i].onmouseover=function(){
-				var img=new Image();
+				var  img=new Image();
 				img.src=listimg[0].src=this.src.replace(/small/,'big');	
 				Picbgp.style.display="block";
 				img.complete ? Picbgp.style.display="none" : (listimg[0].onload=function(){
@@ -692,33 +692,33 @@
 
 	</form>
 	<script >
-		var document10=document.getElementById("js2_10");
-		var checkSelect=document.getElementById("checkSelect");
-		var labtxt=document10.getElementsByTagName("label")[0];
-		var linka=document10.getElementsByTagName("a")[0];
+		var  document10=document.getElementById("js2_10");
+		var  checkSelect=document.getElementById("checkSelect");
+		var  labtxt=document10.getElementsByTagName("label")[0];
+		var  linka=document10.getElementsByTagName("a")[0];
 		
-		var form10=document.getElementById("form10").getElementsByTagName("input");
+		var  form10=document.getElementById("form10").getElementsByTagName("input");
 		
 		function isCheckAll(){
-			for(var i=0,n=0,len=form10.length;i<len;i++){
+			for(var  i=0,n=0,len=form10.length;i<len;i++){
 				form10[i].checked && n++;  //console.log(i);
 			}
 			checkSelect.checked= n==len;
 			labtxt.innerText= checkSelect.checked ? "全不选":"全选" ;
 		}
 		checkSelect.onclick=function(){     //全选和全不选
-			for(let i=0,len=form10.length;i<len;i++){
+			for(var i=0,len=form10.length;i<len;i++){
 					form10[i].checked =this.checked;
 				}
 			isCheckAll();
 		}
-		for(let i=0,len=form10.length;i<len;i++){    //单选复数个框
+		for(var i=0,len=form10.length;i<len;i++){    //单选复数个框
 			form10[i].onclick=function(){
 				isCheckAll();				
 			}
 		}
 		linka.onclick=function(){     //反选
-			for(let i=0,len=form10.length;i<len;i++){
+			for(var  i=0,len=form10.length;i<len;i++){
 				form10[i].checked =!form10[i].checked;
 			}
 			isCheckAll();
@@ -746,8 +746,8 @@
 			<input type="button" id="" value="求和">
 		</h2>	
 		<script>
-		var SuminPut= document.getElementById("js3_1").getElementsByTagName("input");
-		for(let i=0;i<SuminPut.length-2;i++){
+		var  SuminPut= document.getElementById("js3_1").getElementsByTagName("input");
+		for(var  i=0;i<SuminPut.length-2;i++){
 			SuminPut[i].onkeyup=function(){
 				this.value=this.value.replace(/[^\d]/,'');
 			}
@@ -832,12 +832,12 @@
 			</tbody>
 		</table>
 		<script >
-			var  calInput = document.getElementById("js3_2").getElementsByTagName("input");
-			var  aInput0= calInput[1];
-			var  forInput= calInput[0];
-			var s=false;
+			var   calInput = document.getElementById("js3_2").getElementsByTagName("input");
+			var   aInput0= calInput[1];
+			var   forInput= calInput[0];
+			var  s=false;
 			
-			for(let i=2,len=calInput.length;i<len;i++){
+			for(var  i=2,len=calInput.length;i<len;i++){
 				calInput[i].onclick=function(){
 				
 					switch(this.value) {
@@ -911,15 +911,15 @@
 		<h2>时间：<input type="text" id="hour" readonly> : <input type="text" id="minute" readonly> : <input type="text" id="second"readonly>  </h2>
 		<h4>今天是：<span id="year" > </span>年 星期 <span type="number" id="week" ></span></h4>
 		<script >
-			var ntime=new Date();
-			var timeInput =document.getElementById("js3_3").getElementsByTagName("input");
-			var nowtime=setInterval(function(){
-				let ntime=new Date();
+			var  ntime=new Date();
+			var  timeInput =document.getElementById("js3_3").getElementsByTagName("input");
+			var  nowtime=setInterval(function(){
+				var  ntime=new Date();
 				timeInput[0].value =ntime.getHours();
 				timeInput[1].value=ntime.getMinutes()> 9? ntime.getMinutes():('0'+ntime.getMinutes() );
 				timeInput[2].value=ntime.getSeconds()> 9? ntime.getSeconds():('0'+ntime.getSeconds());
 			},100);
-			let ntime2=new Date();
+			var  ntime2=new Date();
 			document.getElementById("js3_3").getElementsByTagName("span")[0].innerText=ntime2.getFullYear();
 			document.getElementById("js3_3").getElementsByTagName("span")[1].innerText=ntime2.getDay();
 		</script>
@@ -1111,14 +1111,14 @@
         </li>        
     </ul> 
 	<script>
-		var navlist= document.getElementById("nav4-1").getElementsByTagName("li");
-		var navdivlist= document.getElementsByClassName("subnav");
-		var navwidth= document.getElementById("nav4-1").offsetWidth;
+		var  navlist= document.getElementById("nav4-1").getElementsByTagName("li");
+		var  navdivlist= document.getElementsByClassName("subnav");
+		var  navwidth= document.getElementById("nav4-1").offsetWidth;
 		<!-- console.log(navdivlist.length); -->
-		for(let i=1,len=navlist.length;i<len;i++){
+		for(var  i=1,len=navlist.length;i<len;i++){
 			navlist[i].onmouseover=function(){		
 				clearlist();
-				let showdiv=this.getElementsByTagName("div")[0];
+				var  showdiv=this.getElementsByTagName("div")[0];
 				showdiv.style.display='block';
 				navwidth-showdiv.offsetWidth > this.offsetLeft?
 				showdiv.style.left=this.offsetLeft+'px':showdiv.style.right=0;
@@ -1129,7 +1129,7 @@
 			}
 		}
 		function clearlist(){
-			for(let m=0;m<navdivlist.length;m++){
+			for(var  m=0;m<navdivlist.length;m++){
 				navdivlist[m].style.display="none";
 			}
 		}
@@ -1200,19 +1200,19 @@
 		</ul>
 		
 		<script>
-			var piclist= document.getElementsByClassName("divlistimg")[0].getElementsByTagName("img");
-			var publist= document.getElementById("showimglist").getElementsByTagName("li");
-			var index=0;			
+			var  piclist= document.getElementsByClassName("divlistimg")[0].getElementsByTagName("img");
+			var  publist= document.getElementById("showimglist").getElementsByTagName("li");
+			var  index=0;			
 			
 
-			for(let i=0,len=piclist.length; i<len; i++){
+			for(var  i=0,len=piclist.length; i<len; i++){
 				publist[i].index=i;
 				publist[i].onclick= function(){
 					index=this.index;
 					picShow(this.index); }
 			}
 			function picHiedden(){   //隐藏所有选项卡图片
-				for(let i=0,len=piclist.length; i<len; i++){
+				for(var  i=0,len=piclist.length; i<len; i++){
 					piclist[i].className="";
 					publist[i].className="";
 				}
@@ -1301,8 +1301,8 @@
 			
 		</form>
 		<script>
-			var loginput43 = document.getElementById("brightselect").getElementsByTagName("input");
-			for(let i=0; i<loginput43.length;i++){
+			var  loginput43 = document.getElementById("brightselect").getElementsByTagName("input");
+			for(var  i=0; i<loginput43.length;i++){
 				loginput43[i].onfocus=function(){
 					this.className="ftext";
 				}
@@ -1354,19 +1354,19 @@
 			</p>
 		</div>
 	<script >
-		var Showonoff=false;
-		var starlist= document.getElementById("starshow").getElementsByTagName("li");
-		var show44=document.getElementById('show44');
-		var startip=document.getElementById('startip');
-		var Msg=[
+		var  Showonoff=false;
+		var  starlist= document.getElementById("starshow").getElementsByTagName("li");
+		var  show44=document.getElementById('show44');
+		var  startip=document.getElementById('startip');
+		var  Msg=[
 				"很不满意|差得太离谱，与卖家描述的严重不符，非常不满",
 				"不满意|部分有破损，与卖家描述的不符，不满意",
 				"一般|质量一般，没有卖家描述的那么好",
 				"满意|质量不错，与卖家描述的基本一致，还是挺满意的",
 				"非常满意|质量非常好，与卖家描述的完全一致，非常满意"
 		];
-		var index44=0;
-		for(let i=0;i< starlist.length;i++){
+		var  index44=0;
+		for(var  i=0;i< starlist.length;i++){
 			starlist[i].index=i+1;
 			starlist[i].onmouseover=function(){
 					Pointstart(this.index);
@@ -1384,7 +1384,7 @@
 			}			
 		}
 		function Pointstart(m){
-			for(let a=0;a < starlist.length;a++){
+			for(var  a=0;a < starlist.length;a++){
 				m= m||index44;   //离开时，m=0 index44 =按下的序号，然后 在小于按下数变为有色；
 				starlist[a].className=  a< m? "icon" : '';			
 			}			
@@ -1442,11 +1442,11 @@
 			</ul>
 		</div>
 		<script>
-			var js5_1=document.getElementById("js5-1");
-			var mouseright=document.getElementById("mouseright");
+			var  js5_1=document.getElementById("js5-1");
+			var  mouseright=document.getElementById("mouseright");
 
 			js5_1.oncontextmenu=function(event){
-				var event=event ||window.event;	
+				var  event=event ||window.event;	
 				mouseright.style.display='block';
 				mouseright.style.left=event.pageX+'px';
 				mouseright.style.top=event.pageY+'px';
@@ -1467,10 +1467,10 @@
 			点击闪烁
 		</div>
 		<script>
-			var div5_2=document.getElementById("js5-2").getElementsByTagName("div")[0];
+			var  div5_2=document.getElementById("js5-2").getElementsByTagName("div")[0];
 			div5_2.onclick=function(){
-				var i=0;
-			var	timer=setInterval( function(){
+				var  i=0;
+			var 	timer=setInterval( function(){
 					div5_2.style.display= i++%2>0? "none" :"block";
 					i>8 &&(clearInterval(timer) );
 					console.log(i);
@@ -1487,17 +1487,17 @@
 				<div  id="jsdiv63" style="width:100px;height:100px;background:#f8e8e8;position:absolute;cursor:pointer"></div>		
 		</div>
 		<script>
-			var jsdiv63=document.getElementById("jsdiv63");
+			var  jsdiv63=document.getElementById("jsdiv63");
 			
 			jsdiv63.onmousedown=function(e){
-				 var pianyiX=e.clientX-jsdiv63.offsetLeft;
-				 var pianyiY=e.clientY-jsdiv63.offsetTop;
-				var maxDwidth=jsdiv63.parentNode.clientWidth-jsdiv63.clientWidth;	 
-				var maxDheight=jsdiv63.parentNode.clientHeight-jsdiv63.clientWidth;	 
+				 var  pianyiX=e.clientX-jsdiv63.offsetLeft;
+				 var  pianyiY=e.clientY-jsdiv63.offsetTop;
+				var  maxDwidth=jsdiv63.parentNode.clientWidth-jsdiv63.clientWidth;	 
+				var  maxDheight=jsdiv63.parentNode.clientHeight-jsdiv63.clientWidth;	 
 				 
 			document.onmousemove=function(e){
-					 var newX=e.clientX-pianyiX;
-					 var newY=e.clientY-pianyiY;
+					 var  newX=e.clientX-pianyiX;
+					 var  newY=e.clientY-pianyiY;
 					newX= newX<0? 0:( newX > maxDwidth? maxDwidth:newX);
 					newY= newY<0? 0:( newY > maxDheight? maxDheight:newY);
 					//console.log(newX+" "+newY)
@@ -1688,22 +1688,22 @@
 		</div>
 		
 	<script>
-			var wbimg =document.getElementById("wbform").getElementsByTagName("img");
-			var wbname =document.getElementById("wbname");
-			var wbtext =document.getElementById("wbtext");
-			var maxNums =document.getElementById("wbgb").getElementsByClassName("maxNum")[0];
-			var wbgb =document.getElementById("wbgb").getElementsByTagName("input")[0];
+			var  wbimg =document.getElementById("wbform").getElementsByTagName("img");
+			var  wbname =document.getElementById("wbname");
+			var  wbtext =document.getElementById("wbtext");
+			var  maxNums =document.getElementById("wbgb").getElementsByClassName("maxNum")[0];
+			var  wbgb =document.getElementById("wbgb").getElementsByTagName("input")[0];
 			
-			var wblists =document.getElementById("wblist").getElementsByTagName('li');
-			var wblist =document.getElementById("wblist");
-			var wbdel=document.getElementsByClassName("wbdel");
-			var wbimgIndex=0;
+			var  wblists =document.getElementById("wblist").getElementsByTagName('li');
+			var  wblist =document.getElementById("wblist");
+			var  wbdel=document.getElementsByClassName("wbdel");
+			var  wbimgIndex=0;
 			 
-			for(let i=0,len=wbimg.length;i<len;i++){
+			for(var  i=0,len=wbimg.length;i<len;i++){
 				wbimg[i].index=i;
 				wbimg[i].onclick=function(){
 					wbimgIndex=this.index;  //console.log(len);
-					for(let m=0;m<len;m++){
+					for(var  m=0;m<len;m++){
 						wbimg[m].className="";	
 					}	
 					wbimg[this.index].className="current62";					
@@ -1717,15 +1717,15 @@
 			wbgb.onclick=function(){
 				if( wbname.value=='' || wbtext.value=='' )
 					{	alert("必须输入姓名和内容"); return;  }
-				let ndate=new Date();	
-				let wbObj={
+				var  ndate=new Date();	
+				var  wbObj={
 					"wbname":wbname.value,
 					"imgsrc":wbimg[wbimgIndex].src,
 					"wbtext":wbtext.value,
 					"wbtime":ndate.getMonth()+1+'月'+ndate.getDate()+'日 '+ndate.getHours()+':'+ndate.getMinutes()								
 				}
-				var htmllist=document.getElementById("tplList").innerHTML;
-				var para=document.createElement("li");
+				var  htmllist=document.getElementById("tplList").innerHTML;
+				var  para=document.createElement("li");
 				para.innerHTML=htmllist.temp(wbObj);
 				wblist.appendChild(para );  //必须新建一个li
 				wbdelFunction();
@@ -1733,13 +1733,13 @@
 			
 			String.prototype.temp = function(obj) {
 				return this.replace(/\$\w+\$/gi, function(matchs) {
-					var returns = obj[matchs.replace(/\$/g, "")];		
+					var  returns = obj[matchs.replace(/\$/g, "")];		
 					return (returns + "") == "undefined"? "": returns;
 				});
 			};
 			
 			function wbdelFunction() { 		  //重置到开始状态
-				for(let i=0;i<wbdel.length;i++){				
+				for(var  i=0;i<wbdel.length;i++){				
 					wbdel[i].onclick=function(){
 						this.parentElement.parentElement.parentElement.style.display="none";
 					}
@@ -1747,7 +1747,7 @@
 				wbname.value='';
 				wbtext.value='';
 				maxNums.innerHTML='140';
-				for(let m=0;m<wbimg.length;m++){
+				for(var  m=0;m<wbimg.length;m++){
 						wbimg[m].className="";	
 					}	
 				wbimg[0].className="current62";	
@@ -1781,16 +1781,16 @@
 		
 		</div>
 		<script>
-			var movediv=document.getElementById('movediv');
-			var movebox=document.getElementById('movebox');
-			var i=0;			
-			var aInput= document.getElementById("js7-1").getElementsByTagName("input");				
+			var  movediv=document.getElementById('movediv');
+			var  movebox=document.getElementById('movebox');
+			var  i=0;			
+			var  aInput= document.getElementById("js7-1").getElementsByTagName("input");				
 			aInput[0].onclick=function(event){   //直接点击到位置
 				(event || window.event ).cancelBubble =true; //取消冒泡
 				clearEvent();
 				this.value+="(已激活)";
 				movebox.onclick=function(event){
-					var event =event ||window.event;
+					var  event =event ||window.event;
 					movediv.style.background="url(http://www.fgm.cc/learn/lesson7/img/2.gif) no-repeat";
 					startMove( movediv,{x:event.pageX, y:event.pageY},function(){
 						movediv.style.background="url(http://www.fgm.cc/learn/lesson7/img/1.gif) no-repeat"	;					
@@ -1807,8 +1807,8 @@
 			}
 			
 			function doMove(obj,oTarget,fnEnd){	
-				var iX = (oTarget.x - obj.offsetLeft) / 5;
-				var iY = (oTarget.y - obj.offsetTop) / 5;
+				var  iX = (oTarget.x - obj.offsetLeft) / 5;
+				var  iY = (oTarget.y - obj.offsetTop) / 5;
 				iX = iX > 0 ? Math.ceil(iX) : Math.floor(iX);
 				iY = iY > 0 ? Math.ceil(iY) : Math.floor(iY);
 				console.log(iX+" "+iY);
@@ -1838,12 +1838,12 @@
 				(event || window.event).cancelBubble = true;
 				clearEvent();
 				this.value+="(已激活)";
-				var aPos=[{x:event.pageX,y:event.pageY}];  //存鼠标位置
+				var  aPos=[{x:event.pageX,y:event.pageY}];  //存鼠标位置
 				movebox.onmousedown=function(event){
-					var event=event || window.event;
+					var  event=event || window.event;
 					aPos.push({x:event.pageX,y:event.pageY});
 					movebox.onmousemove=function(event){   //按下 移动鼠标
-						var event=event || window.event;
+						var  event=event || window.event;
 						aPos.push({x:event.pageX,y:event.pageY});	
 						return	false;	
 					}
@@ -1852,7 +1852,7 @@
 				movebox.onmouseup=function(){
 					movebox.onmousemove=null;
 					movediv.style.background="url(http://www.fgm.cc/learn/lesson7/img/2.gif) no-repeat";
-					var timer=setInterval(function(){
+					var  timer=setInterval(function(){
 						if(aPos.length==0){
 							clearInterval(timer);
 							movediv.style.background="url(http://www.fgm.cc/learn/lesson7/img/1.gif) no-repeat";
@@ -1905,24 +1905,24 @@
 			</div>
 		<button id="resetIphone">重置</button>
 	<script>
-		var iphoneSta =document.getElementById("iphoneSta");
-	var iPhone = document.getElementById("iphone");
-	var oLock = document.getElementById("lock");
-	var oBtn = oLock.getElementsByTagName("span")[0];
-	var resetIphone= document.getElementById("resetIphone");
-	var disX = 0;
-	var maxL = oLock.clientWidth - oBtn.offsetWidth;
-	var oBg = document.createElement("img");
+		var  iphoneSta =document.getElementById("iphoneSta");
+	var  iPhone = document.getElementById("iphone");
+	var  oLock = document.getElementById("lock");
+	var  oBtn = oLock.getElementsByTagName("span")[0];
+	var  resetIphone= document.getElementById("resetIphone");
+	var  disX = 0;
+	var  maxL = oLock.clientWidth - oBtn.offsetWidth;
+	var  oBg = document.createElement("img");
 	oBg.src = "http://fgm.cc/iphone/2.jpg";//预加载下第二张背景，其它没什么大用。
 	oBtn.onmousedown = function (e)
 	{
-		var e = e || window.event;
+		var  e = e || window.event;
 		disX = e.clientX - this.offsetLeft;
 		
 		iPhone.onmousemove = function (e)
 		{
-			var e = e || window.event;
-			var l = e.clientX - disX;
+			var  e = e || window.event;
+			var  l = e.clientX - disX;
 			
 			l < 0 && (l = 0);
 			l > maxL && (l = maxL);
@@ -1958,7 +1958,7 @@
 	}
 	function doMove2 (iTarget, onEnd)
 	{
-		var iSpeed = (iTarget - oBtn.offsetLeft) / 5;
+		var  iSpeed = (iTarget - oBtn.offsetLeft) / 5;
 		iSpeed = iSpeed > 0 ? Math.ceil(iSpeed) : Math.floor(iSpeed);
 		iTarget == oBtn.offsetLeft ? (clearInterval(oBtn.timer), onEnd && onEnd()) : oBtn.style.left = iSpeed + oBtn.offsetLeft + "px"
 	}
@@ -2080,20 +2080,20 @@
 			</div>
 		</div>	
 		<script>
-			var barlist =document.getElementById("barlist82");
-			var barleft =document.getElementById("barleft");
-			var barbar =document.getElementById("barbar");
-			var barright =document.getElementById("barright");
-			var barshow =document.getElementById("barshow");
-			var minL=barbar.offsetLeft;
-			var maxR=barright.offsetLeft-barbar.offsetWidth;
+			var  barlist =document.getElementById("barlist82");
+			var  barleft =document.getElementById("barleft");
+			var  barbar =document.getElementById("barbar");
+			var  barright =document.getElementById("barright");
+			var  barshow =document.getElementById("barshow");
+			var  minL=barbar.offsetLeft;
+			var  maxR=barright.offsetLeft-barbar.offsetWidth;
 			barbar.onmousedown=function(e){
-				var e=e || window.enevt;
-				var dix=e.clientX-this.offsetLeft;
+				var  e=e || window.enevt;
+				var  dix=e.clientX-this.offsetLeft;
 					 
 				barbar.onmousemove=function(e){
-					var e=e || window.enevt;
-					var nowX=e.clientX-dix;
+					var  e=e || window.enevt;
+					var  nowX=e.clientX-dix;
 					//根据位置判断左右图标的背景
 					nowX < minL ? (nowX=minL,barleft.style.background="url(img/03.gif) 0 -19px no-repeat") :
 					( nowX > (maxR+6) ? (nowX=maxR+6,barright.style.background="url(img/03.gif) -32px -19px no-repeat") :
@@ -2200,11 +2200,11 @@
 		</div>
 		<a  id="Ropen" href='javascript:' title="打开" ></a>
 		<script>
-			var Rmin = document.getElementById('Rmin');
-			var Rmax = document.getElementById('Rmax');
-			var Rclose = document.getElementById('Rclose');
-			var Ropen = document.getElementById('Ropen');
-			var Rizebox = document.getElementById('Rizebox');
+			var  Rmin = document.getElementById('Rmin');
+			var  Rmax = document.getElementById('Rmax');
+			var  Rclose = document.getElementById('Rclose');
+			var  Ropen = document.getElementById('Ropen');
+			var  Rizebox = document.getElementById('Rizebox');
 			
 			Rclose.onclick=Rmin.onclick=function(){
 				Rizebox.style.display="none";
@@ -2279,11 +2279,11 @@
 	 * @param {Fucntion} cal 加载完成后的回调方法
 	 */
 		function loadr(rsc,w,h,cal){   //首先当然是载入图片，计算宽高，对比拼图区域的尺寸进行缩放，如果比例不同，还得“裁剪”掉多余的部分
-			var img= new Image();
+			var  img= new Image();
 			img.onload=function(){
-				var xw =img.width;
-				var xh =img.height;
-				var zw = xh* w/h; //缩放比例
+				var  xw =img.width;
+				var  xh =img.height;
+				var  zw = xh* w/h; //缩放比例
 				if(zw > xw){
 					img.width=w;
 					img.height=xh* w/zw;
@@ -2491,7 +2491,7 @@
 		{
 			initialize : function (id)
 			{
-				var _this = this;
+				var  _this = this;
 				this.wrap = typeof id === "string" ? document.getElementById(id) : id;
 				this.oUl = this.wrap.getElementsByTagName("ul")[0];
 				this.aLi = this.wrap.getElementsByTagName("li");
@@ -2511,7 +2511,7 @@
 					{width:130, height:170, top:61, left:620, zIndex:2},
 					{width:120, height:150, top:71, left:496, zIndex:1}
 				];
-				for (var i = 0; i < this.aLi.length; i++) this.aSort[i] = this.aLi[i];
+				for (var  i = 0; i < this.aLi.length; i++) this.aSort[i] = this.aLi[i];
 				this.aSort.unshift(this.aSort.pop());
 				this.setUp();
 				this.addEvent(this.prev, "click", this._doPrev);
@@ -2545,19 +2545,19 @@
 			},
 			doImgClick : function ()
 			{
-				var _this = this;
-				for (var i = 0; i < this.aSort.length; i++)
+				var  _this = this;
+				for (var  i = 0; i < this.aSort.length; i++)
 				{
 					this.aSort[i].onclick = function ()
 					{
 						if (this.index > _this.iCenter)
 						{
-							for (var i = 0; i < this.index - _this.iCenter; i++) _this.aSort.push(_this.aSort.shift());
+							for (var  i = 0; i < this.index - _this.iCenter; i++) _this.aSort.push(_this.aSort.shift());
 							_this.setUp()
 						}
 						else if(this.index < _this.iCenter)
 						{
-							for (var i = 0; i < _this.iCenter - this.index; i++) _this.aSort.unshift(_this.aSort.pop());
+							for (var  i = 0; i < _this.iCenter - this.index; i++) _this.aSort.unshift(_this.aSort.pop());
 							_this.setUp()
 						}
 					}
@@ -2565,8 +2565,8 @@
 			},
 			setUp : function ()
 			{
-				var _this = this;
-				var i = 0;
+				var  _this = this;
+				var  i = 0;
 				for (i = 0; i < this.aSort.length; i++) this.oUl.appendChild(this.aSort[i]);
 				for (i = 0; i < this.aSort.length; i++)
 				{
@@ -2652,16 +2652,16 @@
 			},
 			doMove : function (oElement, oAttr, fnCallBack)
 			{
-				var _this = this;
+				var  _this = this;
 				clearInterval(oElement.timer);
 				oElement.timer = setInterval(function ()
 				{
-					var bStop = true;
-					for (var property in oAttr)
+					var  bStop = true;
+					for (var  property in oAttr)
 					{
-						var iCur = parseFloat(_this.css(oElement, property));
+						var  iCur = parseFloat(_this.css(oElement, property));
 						property == "opacity" && (iCur = parseInt(iCur.toFixed(2) * 100));
-						var iSpeed = (oAttr[property] - iCur) / 5;
+						var  iSpeed = (oAttr[property] - iCur) / 5;
 						iSpeed = iSpeed > 0 ? Math.ceil(iSpeed) : Math.floor(iSpeed);
 						
 						if (iCur != oAttr[property])
@@ -2861,15 +2861,15 @@
 			<!--/sub-->
 			<div id="plbanner"></div>
 		<script>
-				var pnav=document.getElementById("pinav").getElementsByTagName("ul")[0];
-				var pnavlist= pnav.getElementsByTagName("li");
-				var psub=document.getElementById("plsub");
-				var psublist =psub.getElementsByTagName("ul");
-			//	var i=0;
-				for( let index=0;index<pnavlist.length;index++){
+				var  pnav=document.getElementById("pinav").getElementsByTagName("ul")[0];
+				var  pnavlist= pnav.getElementsByTagName("li");
+				var  psub=document.getElementById("plsub");
+				var  psublist =psub.getElementsByTagName("ul");
+			//	var  i=0;
+				for( var  index=0;index<pnavlist.length;index++){
 
 						pnavlist[index].onmouseover=psublist[index].onmouseover=function(){
-							for(let i=0;i<pnavlist.length;i++)
+							for(var  i=0;i<pnavlist.length;i++)
 								pnavlist[i].className = psublist[i].className='';
 							index &&( pnavlist[index].className = psublist[index].className="pcurrent" );	
 						};
@@ -2899,7 +2899,29 @@
 <br>	
 <br>		
 	<h2 class="clear"> bodyfoot</h2>
-	
+	<script>
+		function Cookie(document, name, hours, path, domain,secure)		{
+			this.$document = document;
+			this.$name = name;
+			if( hours )
+				this.$expiration = new Data((new Data()).getTime() + hours*3600000;
+			else 
+			    this.$expiration = null;
+			
+			if(path) 
+				this.$path = path ; 
+			else 
+				this.$path = null;
+			if(domain)
+				this.$domain = domain;
+			else 
+				this.$domain = null;
+			if(secure)
+				this.$secure = secure;
+			else this.$secure = null;
+		}
+		
+	</script>
 
 <br>	
 <br>	
